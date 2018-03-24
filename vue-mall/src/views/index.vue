@@ -271,9 +271,4 @@ export default {
 .index-board-button {
   margin-top: 20px;
 }
-.button {
-  background: #4fc08d;
-  color: #fff;
-  padding: 8px 20px;
-}
 </style>
