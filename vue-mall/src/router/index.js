@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/views/index'
+import detail from '@/views/detail/detail'
+import analysis from '@/views/detail/analysis'
+import count from '@/views/detail/count'
+import forecast from '@/views/detail/forecast'
+import publish from '@/views/detail/publish'
 
 Vue.use(Router)
 
@@ -9,6 +14,28 @@ export default new Router({
     {
       path: '/',
       component: index
+    },
+    {
+      path: '/detail',
+      component: detail,
+      children: [
+        {
+          path: 'analysis',
+          component: analysis
+        },
+        {
+          path: 'count',
+          component: count
+        },
+        {
+          path: 'forecast',
+          component: forecast
+        },
+        {
+          path: 'publish',
+          component: publish
+        }
+      ]
     }
   ]
 })
