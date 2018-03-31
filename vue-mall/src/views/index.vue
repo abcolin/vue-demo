@@ -58,22 +58,22 @@ export default {
         {
           src: require('../assets/slideShow/pic1.jpg'),
           title: 'xxx1',
-          href: 'detail/analysis'
+          href: '/detail/count'
         },
         {
           src: require('../assets/slideShow/pic2.jpg'),
           title: 'xxx2',
-          href: 'detail/count'
+          href: '/detail/forecast'
         },
         {
           src: require('../assets/slideShow/pic3.jpg'),
           title: 'xxx3',
-          href: 'http://xxx.xxx.com'
+          href: '/detail/analysis'
         },
         {
           src: require('../assets/slideShow/pic4.jpg'),
           title: 'xxx4',
-          href: 'detail/forecast'
+          href: '/detail/publish'
         }
       ],
       boardList: [
@@ -81,21 +81,21 @@ export default {
           title: '开放产品',
           description: '开放产品是一款开放产品',
           id: 'earth',
-          toKey: 'analysis',
+          toKey: 'count',
           saleout: false
         },
         {
           title: '品牌营销',
           description: '品牌营销帮助你的产品更好地找到定位',
           id: 'loud',
-          toKey: 'count',
+          toKey: 'forecast',
           saleout: false
         },
         {
           title: '使命必达',
           description: '使命必达快速迭代永远保持最前端的速度',
           id: 'car',
-          toKey: 'forecast',
+          toKey: 'analysis',
           saleout: true
         },
         {
