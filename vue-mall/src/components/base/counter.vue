@@ -38,7 +38,10 @@ export default {
       } else {
         fix = this.number
       }
-      if (fix > this.max || fix < this.min) {
+      if (fix >= this.max) {
+        fix = this.max
+      }
+      if (fix <= this.min) {
         fix = this.min
       }
       this.number = fix
