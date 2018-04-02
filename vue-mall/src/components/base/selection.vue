@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { bus } from '../../bus'
+
 export default {
   props: {
     selections: {
@@ -33,13 +35,20 @@ export default {
       nowIndex: 0
     }
   },
+  mounted () {
+    bus.$on('reset-select', () => {
+      this.isDrop = false
+    })
+  },
   methods: {
-    toggleDrop () {
+    toggleDrop (e) {
+      e.stopPropagation()
+      bus.$emit('reset-select')
       this.isDrop = !this.isDrop
     },
     chooseSelection (index) {
       this.nowIndex = index
-      this.isDrop = false
+      // this.isDrop = false
       this.$emit('on-change', this.selections[this.nowIndex])
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="resetSelect">
     <div class="app-head">
       <div class="app-head-inner">
         <router-link :to="{ path: '/'}">
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import { bus } from './bus'
 import Dialog from './components/dialog/dialog'
 import LogForm from './components/dialog/logForm'
 import RegForm from './components/dialog/regForm'
@@ -80,6 +81,9 @@ export default {
     },
     onSuccessReg () {
       this.closeDialog('isShowRegDialog')
+    },
+    resetSelect () {
+      bus.$emit('reset-select')
     }
   }
 }

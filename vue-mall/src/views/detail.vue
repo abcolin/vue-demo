@@ -69,36 +69,36 @@ export default {
   margin: 0 auto;
   overflow: hidden;
   padding-top: 20px;
-}
-.detail-left {
-  float: left;
-  width: 200px;
-  text-align: center;
-}
-.detail-right {
-  float: left;
-  width: 980px;
-  margin-left: 20px;
-}
-.product-board {
-  background: #fff;
-  padding: 20px 0;
-}
-.product-board ul {
-  margin-top: 20px;
-}
-.product-board li {
-  text-align: left;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-.product-board li.active,
-.product-board li:hover {
-  background: #4fc08d;
-  color: #fff;
-}
-.product-board li a {
-  display: block;
+  .detail-left {
+    float: left;
+    width: 200px;
+    text-align: center;
+    .product-board {
+      background: #fff;
+      padding: 20px 0;
+      ul {
+        margin-top: 20px;
+        li {
+          text-align: left;
+          padding: 10px 15px;
+          cursor: pointer;
+          &.active,
+          &:hover {
+            background: #4fc08d;
+            color: #fff;
+          }
+          a {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .detail-right {
+    float: left;
+    width: 980px;
+    margin-left: 20px;
+  }
 }
 .sales-board {
   background: #fff;
