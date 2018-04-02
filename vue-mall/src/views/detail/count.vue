@@ -244,10 +244,12 @@
 
 <script>
 import VChooser from '@/components/base/chooser'
+import VSelection from '@/components/base/selection'
 
 export default {
   components: {
-    VChooser
+    VChooser,
+    VSelection
   },
   data () {
     return {
